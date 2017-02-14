@@ -1,0 +1,65 @@
+<html>
+
+<head>
+	<% include ../partials/head %>
+</head>
+	
+<body>
+<nav class="navbar navbar-light navbar-inverse bg-primary" style="background-color: #333399;">
+	
+</nav>
+<div class="container">	
+	
+	<table class="table table-striped table-hover table-bordered">
+		<tr>
+			<th>
+				num	
+			</th>
+			<th>
+				sid	
+			</th>
+			<th>
+				words
+			</th>
+			<th>
+				positive_pb
+			</th>
+			<th>
+				negative_pb
+			</th>
+			<th>
+				predict
+			</th>			
+		</tr>
+		
+			<% json.forEach(function (v) {%>
+			<tr>
+				<td>
+					<%= v.num%>
+				</td>
+				<td>
+					<%= v.sid%>
+				</td>
+				<td>
+					<%= v.words%>
+				</td>
+				<td>
+					<%= v.positive_pb%>
+				</td>
+				<td>
+					<%= v.negative_pb%>
+				</td>
+				<td>
+					<%= v.predict%>
+				</td>
+			</tr>
+		<%})%>
+
+	</table>
+	
+	
+</div>
+
+</body>
+	<% include ../partials/jsdefaults %>
+</html>
